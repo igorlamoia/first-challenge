@@ -12,7 +12,7 @@ export function Home() {
     setTasks([
       ...tasks,
       {
-        id: tasks.length,
+        id: new Date().getTime(),
         title: newTaskTitle,
         done: false,
       },

@@ -45,12 +45,12 @@ export function Home() {
       'Tem certeza que você deseja remover esse item?',
       [
         {
-          text: 'Sim',
-          onPress: () => setTasks(tasks.filter((task) => task.id != id)),
-        },
-        {
           text: 'Não',
           style: 'cancel',
+        },
+        {
+          text: 'Sim',
+          onPress: () => setTasks(tasks.filter((task) => task.id != id)),
         },
       ]
     );

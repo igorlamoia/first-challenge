@@ -75,7 +75,6 @@ export const TaskItem = ({
             value={taskNewTitleValue}
             editable={isEditing}
             onSubmitEditing={handleSubmitEditing}
-            onBlur={() => setIsEditing(false)}
           />
         </TouchableOpacity>
       </View>

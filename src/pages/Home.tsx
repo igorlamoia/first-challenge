@@ -19,7 +19,7 @@ export function Home() {
     ];
     if (tasks.some((task) => task.title == newTaskTitle))
       Alert.alert(
-        'Atenção!',
+        'Task já cadastrada',
         'Você não pode cadastrar uma task com o mesmo nome',
         [
           {
@@ -40,16 +40,20 @@ export function Home() {
   };
 
   const handleRemoveTask = (id: number) => {
-    Alert.alert('Atenção', 'Tem certeza que você deseja remover esse item?', [
-      {
-        text: 'Claro',
-        onPress: () => setTasks(tasks.filter((task) => task.id != id)),
-      },
-      {
-        text: 'Quero mais não',
-        style: 'cancel',
-      },
-    ]);
+    Alert.alert(
+      'Remover item',
+      'Tem certeza que você deseja remover esse item?',
+      [
+        {
+          text: 'Sim',
+          onPress: () => setTasks(tasks.filter((task) => task.id != id)),
+        },
+        {
+          text: 'Não',
+          style: 'cancel',
+        },
+      ]
+    );
   };
 
   const handleEditTask = (taskId: number, taskEdited: string) => {

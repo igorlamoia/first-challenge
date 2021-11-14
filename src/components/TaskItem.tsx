@@ -95,7 +95,7 @@ export const TaskItem = ({
           onPress={() => removeTask(task.id)}
           disabled={isEditing}
         >
-          <Image source={trashIcon} opacity={isEditing ? 0.3 : 1} />
+          <Image source={trashIcon} style={{ opacity: isEditing ? 0.3 : 1 }} />
         </TouchableOpacity>
       </View>
     </>
